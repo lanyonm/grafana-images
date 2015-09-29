@@ -10,7 +10,7 @@ import (
 
 var (
 	post_data = `{
-		"imageUrl": "https://grafana.test.com/render/dashboard-solo/db/sample-dashboard/?panelId=5&width=1000&height=500&from=now-6h&to=now&var-server=test-server"
+		"imageUrl": "http://httpstat.us/418?panelId=5&width=1000&height=500&from=now-6h&to=now&var-server=test-server"
 	}`
 	host      = "http://grafana.example.com/saved-images"
 	imagePath = os.TempDir()
@@ -28,7 +28,7 @@ func TestGrafanaImagesHandlerSuccess(t *testing.T) {
 	if code := resp.Code; code != expected_response_code {
 		t.Errorf("received %v response code, expected %v", code, expected_response_code)
 	}
-	const expected_response_body = `{"pubImg":"http://grafana.example.com/saved-images/d494b123e0c40229ca3f1e9015390578.png"}`
+	const expected_response_body = `{"pubImg":"http://grafana.example.com/saved-images/6d3b78cb8bcffe91aa5afaf869f070e3.png"}`
 	if ret := resp.Body.String(); ret != expected_response_body {
 		t.Errorf("received %v response body, expected %v", ret, expected_response_body)
 	}
