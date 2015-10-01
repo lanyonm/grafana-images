@@ -12,7 +12,7 @@ import (
 func main() {
 	var (
 		port      = flag.Int("port", 8080, "grafana-images listening port")
-		imageHost = flag.String("imageHost", "http://grafana.example.com", "host for the saved images")
+		imageHost = flag.String("imageHost", "http://grafana.example.com/saved-images", "host for the saved images")
 		imagePath = flag.String("imagePath", "/opt/saved-images", "location on disk where images will be saved")
 	)
 	flag.Parse()

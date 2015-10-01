@@ -1,5 +1,5 @@
 # grafana-images [![Build Status](https://travis-ci.org/lanyonm/grafana-images.svg)](https://travis-ci.org/lanyonm/grafana-images) [![Coverage Status](https://coveralls.io/repos/lanyonm/grafana-images/badge.svg)](https://coveralls.io/r/lanyonm/grafana-images)
-This program interacts with [Grafana](http://grafana.org/) and [hubot-grafana](https://github.com/stephenyeargin/hubot-grafana) to provide facility to copy/save Grafana panel images to a location on disk. The idea is that this location is then shared by a web server so the images can be publically available. The rough system call diagram is as follows:
+This program interacts with [Grafana](http://grafana.org/) and [hubot-grafana](https://github.com/criticalmass/hubot-grafana) to provide facility to copy/save Grafana panel images to a location on disk. The idea is that this location is then shared by a web server so the images can be publically available. The rough system call diagram is as follows:
 
 ![grafana-images http call diagram](http://blog.lanyonm.org/images/grafana-images-diagram-no-numbers.svg)
 
@@ -29,10 +29,12 @@ In addition to this application, it is assumed that you have a web server set up
 ```
 $ grafana-images --help
 Usage of grafana-images:
-  -imageHost="http://grafana.example.com": host for the saved images
+  -imageHost="http://grafana.example.com/saved-images": host for the saved images
   -imagePath="/opt/saved-images": location on disk where images will be saved
   -port=8080: grafana-images listening port
 ```
+
+For more information on how this fits together have a look at [ChatOps: Hubot Grafana Images in HipChat](http://blog.lanyonm.org/articles/2015/09/30/chatops-hubot-grafana-images-hipchat.html).
 
 ## Building
 This will run tests as well.
