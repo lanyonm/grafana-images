@@ -1,7 +1,7 @@
 # grafana-images [![Build Status](https://travis-ci.org/lanyonm/grafana-images.svg)](https://travis-ci.org/lanyonm/grafana-images) [![Coverage Status](https://coveralls.io/repos/lanyonm/grafana-images/badge.svg)](https://coveralls.io/r/lanyonm/grafana-images)
 This program interacts with [Grafana](http://grafana.org/) and [hubot-grafana](https://github.com/stephenyeargin/hubot-grafana) to provide facility to copy/save Grafana panel images to a location on disk. The idea is that this location is then shared by a web server so the images can be publically available. The rough system call diagram is as follows:
 
-	To be added...
+![grafana-images http call diagram](http://blog.lanyonm.org/images/grafana-images-diagram-no-numbers.svg)
 
 The HTTP post expected by grafana-images should have two headers and a json payload:
 
