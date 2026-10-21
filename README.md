@@ -1,7 +1,11 @@
-# grafana-images [![Build Status](https://travis-ci.org/lanyonm/grafana-images.svg)](https://travis-ci.org/lanyonm/grafana-images) [![Coverage Status](https://coveralls.io/repos/lanyonm/grafana-images/badge.svg)](https://coveralls.io/r/lanyonm/grafana-images)
-This program interacts with [Grafana](http://grafana.org/) and [hubot-grafana](https://github.com/criticalmass/hubot-grafana) to provide facility to copy/save Grafana panel images to a location on disk. The idea is that this location is then shared by a web server so the images can be publically available. The rough system call diagram is as follows:
+# grafana-images
 
-![grafana-images http call diagram](http://blog.lanyonm.org/images/grafana-images-diagram-no-numbers.svg)
+> [!WARNING]
+> **This project is no longer maintained** and has been archived. It was last updated in 2016 against Go 1.4 and predates Go modules, and it was written for the Grafana 2.x-era render URL format. It's kept for reference only.
+
+This program interacts with [Grafana](https://grafana.com/) and [hubot-grafana](https://github.com/stephenyeargin/hubot-grafana) to provide facility to copy/save Grafana panel images to a location on disk. The idea is that this location is then shared by a web server so the images can be publicly available. The rough system call diagram is as follows:
+
+![grafana-images http call diagram](https://blog.lanyonm.org/images/grafana-images-diagram-no-numbers.svg)
 
 The HTTP post expected by grafana-images should have two headers and a json payload:
 
@@ -34,7 +38,7 @@ Usage of grafana-images:
   -port=8080: grafana-images listening port
 ```
 
-For more information on how this fits together have a look at [ChatOps: Hubot Grafana Images in HipChat](http://blog.lanyonm.org/articles/2015/09/30/chatops-hubot-grafana-images-hipchat.html).
+For more information on how this fits together have a look at [ChatOps: Hubot Grafana Images in HipChat](https://blog.lanyonm.org/articles/chatops-hubot-grafana-images-hipchat/).
 
 ## Building
 This will run tests as well.
@@ -54,4 +58,3 @@ curl -d '{"imageUrl":"https://grafana.test.com/render/dashboard-solo/db/sample-d
 ## Test Coverage
 
 	make cover
-
